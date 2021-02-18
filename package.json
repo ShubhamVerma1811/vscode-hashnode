@@ -3,7 +3,7 @@
   "displayName": "HashNode",
   "description": "An unoffical VSCode extension to interact with HashNode",
   "icon": "src/images/hslogo.png",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Shubham Verma",
   "publisher": "shubhamverma18",
   "engines": {
@@ -22,28 +22,7 @@
         "command": "hashnodeBlogSearch.searchUserBlogs",
         "title": "Search a User's Blogs"
       }
-    ],
-    "viewsContainers": {
-      "activitybar": [
-        {
-          "id": "hashnode",
-          "title": "hashnode",
-          "icon": "src/images/hslogo.png"
-        }
-      ]
-    },
-    "views": {
-      "hashnode": [
-        {
-          "id": "hashnode-view-my-posts",
-          "name": "My HashNode Publication Posts"
-        },
-        {
-          "id": "bhs2",
-          "name": "hashnode view"
-        }
-      ]
-    }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
