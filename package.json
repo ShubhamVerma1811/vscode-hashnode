@@ -1,0 +1,68 @@
+{
+  "name": "hashnode-vscode",
+  "displayName": "HashNode",
+  "description": "An unoffical VSCode extension to interact with HashNode",
+  "icon": "src/images/hslogo.png",
+  "version": "0.0.3",
+  "author": "Shubham Verma",
+  "publisher": "shubhamverma18",
+  "engines": {
+    "vscode": "^1.53.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:hashnodeBlogSearch.searchUserBlogs"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "hashnodeBlogSearch.searchUserBlogs",
+        "title": "Search a User's Blogs"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "hashnode",
+          "title": "hashnode",
+          "icon": "src/images/hslogo.png"
+        }
+      ]
+    },
+    "views": {
+      "hashnode": [
+        {
+          "id": "hashnode-view-my-posts",
+          "name": "My HashNode Publication Posts"
+        },
+        {
+          "id": "bhs2",
+          "name": "hashnode view"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "yarn run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.53.0",
+    "eslint": "^7.19.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.2.1",
+    "typescript": "^4.1.3",
+    "vscode-test": "^1.5.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "node-fetch": "^2.6.1"
+  }
+}
